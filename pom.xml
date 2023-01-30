@@ -20,7 +20,7 @@
     <micronaut.version>3.8.2</micronaut.version>
     <micronaut.data.version>3.9.4</micronaut.data.version>
     <micronaut.runtime>netty</micronaut.runtime>
-    <groovyVersion>3.0.13</groovyVersion>
+    <groovyVersion>4.0.7</groovyVersion>
     <exec.mainClass>com.example.Application</exec.mainClass>
   </properties>
 
@@ -38,10 +38,15 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.codehaus.groovy</groupId>
+      <groupId>org.apache.groovy</groupId>
       <artifactId>groovy</artifactId>
       <version>${groovyVersion}</version>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.groovy</groupId>
+      <artifactId>groovy-sql</artifactId>
+      <version>${groovyVersion}</version>
     </dependency>
     <dependency>
       <groupId>io.micronaut</groupId>
@@ -135,7 +140,7 @@
       <exclusions>
           <exclusion>
             <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
+            <artifactId>*</artifactId>
           </exclusion>
         </exclusions>
     </dependency>
